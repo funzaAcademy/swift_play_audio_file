@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8164.2" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayAudioFile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheesyImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="bO9-tB-sxf">
+                                <rect key="frame" x="45" y="104" width="230" height="171"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="bkV-mG-WVu"/>
+                                    <constraint firstAttribute="height" constant="171" id="hAK-rB-CYd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snH-Mm-G1M">
+                                <rect key="frame" x="49" y="321" width="63" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="LuG-Aa-lXl"/>
+                                    <constraint firstAttribute="height" constant="53" id="yew-hX-7i0"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Pause.png"/>
+                                <connections>
+                                    <action selector="pauseAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dYX-ZJ-gkd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPt-zR-ySG">
+                                <rect key="frame" x="127" y="321" width="56" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="c7b-7h-f9t"/>
+                                    <constraint firstAttribute="width" constant="56" id="f0W-s0-mh2"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Play.png"/>
+                                <connections>
+                                    <action selector="playAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s0k-dl-xfg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhY-zG-6xE">
+                                <rect key="frame" x="199" y="321" width="54" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="UjS-fu-Hv7"/>
+                                    <constraint firstAttribute="width" constant="54" id="iXc-Ec-anK"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Stop.png"/>
+                                <connections>
+                                    <action selector="stopAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2yi-Jt-QWB"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="p7o-oy-dT2">
+                                <rect key="frame" x="50" y="413" width="211" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="207" id="JYY-i2-LCl"/>
+                                    <constraint firstAttribute="height" constant="30" id="ShM-Ok-Anj"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="controlVolume:" destination="BYZ-38-t0r" eventType="valueChanged" id="ykS-aN-jUT"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bO9-tB-sxf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="84" id="1yZ-QT-6M6"/>
+                            <constraint firstItem="bO9-tB-sxf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9G6-Cc-csB"/>
+                            <constraint firstItem="FPt-zR-ySG" firstAttribute="leading" secondItem="snH-Mm-G1M" secondAttribute="trailing" constant="15" id="Bi8-E8-hja"/>
+                            <constraint firstItem="p7o-oy-dT2" firstAttribute="top" secondItem="LhY-zG-6xE" secondAttribute="bottom" constant="39" id="IVW-5O-Yj1"/>
+                            <constraint firstItem="LhY-zG-6xE" firstAttribute="top" secondItem="bO9-tB-sxf" secondAttribute="bottom" constant="46" id="KE4-gp-3nn"/>
+                            <constraint firstItem="FPt-zR-ySG" firstAttribute="top" secondItem="bO9-tB-sxf" secondAttribute="bottom" constant="46" id="Qnf-BK-DMk"/>
+                            <constraint firstItem="LhY-zG-6xE" firstAttribute="leading" secondItem="FPt-zR-ySG" secondAttribute="trailing" constant="16" id="Ra6-k1-iwG"/>
+                            <constraint firstItem="p7o-oy-dT2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dQ8-mh-eoG"/>
+                            <constraint firstItem="FPt-zR-ySG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gut-hx-4eD"/>
+                            <constraint firstItem="snH-Mm-G1M" firstAttribute="top" secondItem="bO9-tB-sxf" secondAttribute="bottom" constant="46" id="hJV-TR-8g2"/>
+                            <constraint firstItem="LhY-zG-6xE" firstAttribute="leading" secondItem="FPt-zR-ySG" secondAttribute="trailing" constant="16" id="xv9-gf-f9k"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="myVolumeController" destination="p7o-oy-dT2" id="IAU-u8-9xX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CheesyImage.png" width="2400" height="907"/>
+        <image name="Pause.png" width="160" height="160"/>
+        <image name="Play.png" width="200" height="200"/>
+        <image name="Stop.png" width="100" height="100"/>
+    </resources>
+</document>
